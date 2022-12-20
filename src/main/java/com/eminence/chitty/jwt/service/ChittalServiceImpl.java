@@ -4,6 +4,7 @@ import com.eminence.chitty.jwt.dao.ChitRepository;
 import com.eminence.chitty.jwt.dao.ChittalDetailsRepo;
 import com.eminence.chitty.jwt.dao.UserRegistrationRepo;
 import com.eminence.chitty.jwt.dto.ChittalPost;
+import com.eminence.chitty.jwt.dto.ChittalPostResponse;
 import com.eminence.chitty.jwt.entity.ChittalDetails;
 import com.eminence.chitty.jwt.entity.Chitty;
 import com.eminence.chitty.jwt.entity.UserRegistration;
@@ -22,7 +23,7 @@ public class ChittalServiceImpl implements ChittalService{
     private ChitRepository chitRepository;
 
     @Override
-    public ChittalPost addChittal(ChittalPost request) {
+    public ChittalPostResponse addChittal(ChittalPost request) {
         ChittalDetails chittalDetails = new ChittalDetails();
         BeanUtils.copyProperties(request,chittalDetails);
         chittalDetails.setChittalId(request.getChittalId());
@@ -39,7 +40,7 @@ public class ChittalServiceImpl implements ChittalService{
         chittalDetails.setIncome(request.getIncome());
         chittalDetails.setAadhar(request.getAadhar());
         chittalDetailsRepo.save(chittalDetails);
-
-        return request;
+        Long chittalId = chittalDetails.getChittalId();
+        return new ChittalPostResponse(chittalId);
     }
 }

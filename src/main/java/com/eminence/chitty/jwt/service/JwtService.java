@@ -46,6 +46,7 @@ public class JwtService implements UserDetailsService {
         authenticate(email, password);
 
         UserDetails userDetails = loadUserByUsername(email);
+        System.out.println(userDetails);
         String newGeneratedToken = jwtUtil.generateToken(userDetails);
 
         List<UserLogin> login= userLoginRepo.findAll();
@@ -82,6 +83,7 @@ public class JwtService implements UserDetailsService {
             );
         } else {
             throw new UsernameNotFoundException("User not found with username: " +email );
+
         }
     }
 

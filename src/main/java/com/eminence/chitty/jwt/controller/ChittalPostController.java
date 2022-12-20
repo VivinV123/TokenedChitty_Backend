@@ -1,6 +1,7 @@
 package com.eminence.chitty.jwt.controller;
 
 import com.eminence.chitty.jwt.dto.ChittalPost;
+import com.eminence.chitty.jwt.dto.ChittalPostResponse;
 import com.eminence.chitty.jwt.service.ChittalService;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +19,7 @@ public class ChittalPostController {
     private ChittalService chittalService;
 
     @PostMapping("/add")
-    public ChittalPost addChittal(@RequestBody ChittalPost request){
+    public ChittalPostResponse addChittal(@RequestBody ChittalPost request){
         return chittalService.addChittal(request);
     }
 

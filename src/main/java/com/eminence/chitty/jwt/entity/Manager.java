@@ -12,9 +12,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "manager")
-//@Getter
-//@Setter
-@Data
+@Getter
+@Setter
+//@Data
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Manager {
 

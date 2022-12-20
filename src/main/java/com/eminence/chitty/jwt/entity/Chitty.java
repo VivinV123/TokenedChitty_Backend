@@ -1,16 +1,22 @@
 package com.eminence.chitty.jwt.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "chitty")
-@Data
+//@Data
+@Getter
+@Setter
+
 public class Chitty {
 
     @Id
@@ -44,10 +50,10 @@ public class Chitty {
     private Manager manager;
 
     @Column(name="launch_date")
-    private Date launchDate;
+    private LocalDate launchDate;
 
     @Column(name="start_date")
-    private Date startDate;
+    private LocalDate startDate;
 
     @Column(name = "status")
     private String status;
@@ -57,7 +63,7 @@ public class Chitty {
     private Set<ChittalDetails> chittals= new HashSet<>();
 
 
-    public Chitty(Long chitNumber, Long installment, Long duration, ChittyCategory category, int numberOfChittal, int currentNumberOfChittal, Long totalAmount, Manager manager, Date launchDate, Date startDate, String status) {
+    public Chitty(Long chitNumber, Long installment, Long duration, ChittyCategory category, int numberOfChittal, int currentNumberOfChittal, Long totalAmount, Manager manager, LocalDate launchDate, LocalDate startDate, String status) {
         this.chitNumber = chitNumber;
         this.installment = installment;
         this.duration = duration;

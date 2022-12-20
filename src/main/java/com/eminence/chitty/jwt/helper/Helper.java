@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Helper {
 
-    final static String defaultPassword = "manager@123";
+    final static String defaultPassword = "$2a$10$z5gwKRfEH3nTy5kquLIdeelC6eGZvyQ4AlKufhbpFWZMCUnQ459.a";
 
     //check that file is of excel type or not
     public static boolean checkExcelFormat(MultipartFile file) {
