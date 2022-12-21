@@ -1,12 +1,18 @@
 package com.eminence.chitty.jwt.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @Table(name="customer")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRegistration {
 
     @Id
@@ -31,4 +37,6 @@ public class UserRegistration {
 
     @Column(name = "roleid")
     private Integer roleId;
+
+
 }

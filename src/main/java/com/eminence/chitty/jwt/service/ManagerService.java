@@ -40,5 +40,9 @@ public class ManagerService {
         this.managerRepo.save(manager);
     }
 
+    public ManagerService(ManagerRepo managerRepo) {
+        this.managerRepo = managerRepo;
+    }
+
 
 }
