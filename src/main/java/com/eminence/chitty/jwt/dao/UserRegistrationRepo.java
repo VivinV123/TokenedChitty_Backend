@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "userprofile",path="user-details")
 @DynamicUpdate
 public interface UserRegistrationRepo extends JpaRepository<UserRegistration,Long>

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "chittycategory", path = "chittycategory")
 public interface ChitCategoryRepository extends JpaRepository<ChittyCategory, Long> {
 

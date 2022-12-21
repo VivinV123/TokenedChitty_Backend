@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "userlogin", path="users")
-@CrossOrigin(origins="*")
+@CrossOrigin
 @DynamicUpdate
 public interface UserLoginRepo extends JpaRepository<UserLogin, Long> {
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Optional;
 
-@CrossOrigin(origins="*")
+@CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "manager",path = "managers")
 @Controller
 @ResponseBody
