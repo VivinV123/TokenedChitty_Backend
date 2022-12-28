@@ -37,7 +37,7 @@ class UserRegistrationRepoTest {
                 .lastName("asdfg")
                 .mobileNo(12345678L)
                 .passWord("asdfghj")
-                .roleId(2)
+                .roleId(3)
                 .build();
 
         userRegistrationRepo.save(user);

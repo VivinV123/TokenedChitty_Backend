@@ -1,4 +1,4 @@
-package com.eminence.chitty.controller;
+package com.eminence.chitty.jwt.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -14,23 +15,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class UserServiceControllerTest {
+class JwtControllerTest {
+
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void submitRegistrationSuccess() throws Exception {
+    public void signinuserSuccess() throws Exception {
         this.mockMvc
                 .perform(
-                        post("/api/user-profile")
+                        post("/authenticate")
 //                                .with(csrf())
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .param("firstName", "Sreeni")
-                                .param("lastName", "Sreeni")
-                                .param("email", "new@logwintech.com")
-                                .param("mobileNo", "12345678")
-                                .param("passWord", "password")
-                                .param("roleId", "2")
+                                .param("email", "admin@gmail.com")
+                                .param("password", "admin123")
+
 
 
                 )
@@ -38,7 +37,5 @@ class UserServiceControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print());
     }
-
-
 
 }
