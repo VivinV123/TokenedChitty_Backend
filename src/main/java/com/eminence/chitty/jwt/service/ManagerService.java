@@ -32,12 +32,13 @@ public class ManagerService {
         return (List<Manager>)managerRepo.findAll();
     }
 
-//    public List<Manager> getAllManagers() {
-//        return this.managerRepo.findAll();
-//    }
-//
+
     public void add(Manager manager){
         this.managerRepo.save(manager);
+    }
+
+    public ManagerService(ManagerRepo managerRepo) {
+        this.managerRepo = managerRepo;
     }
 
 
