@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class AuctionPost {
     private Long Id;
-    private Long chittyId;
+    private String chittyId;
     private Long userId;
     private Long currentBid;
 }

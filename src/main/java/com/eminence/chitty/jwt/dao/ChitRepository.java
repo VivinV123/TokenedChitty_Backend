@@ -14,10 +14,10 @@ import java.util.Optional;
 
 @CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "chitty",path = "chitty")
-public interface ChitRepository extends JpaRepository<Chitty,Long> {
+public interface ChitRepository extends JpaRepository<Chitty,String> {
     @Override
-    Optional<Chitty> findById(Long aLong);
+    Optional<Chitty> findById(String aLong);
 
-    Page<Chitty> findBychitNumber(@Param("chitno") Long chitNumber, Pageable pageable);
+    Page<Chitty> findBychitNumber(@Param("chitno") String chitNumber, Pageable pageable);
 
 }

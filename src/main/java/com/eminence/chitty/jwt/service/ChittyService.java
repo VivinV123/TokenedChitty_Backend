@@ -10,7 +10,7 @@ public interface ChittyService {
 
     ChittyPost addChitty(ChittyPost request);
     ChittyPost updateChitty(ChittyPost request);
-    public Optional<Chitty> findById(Long chitNumber);
+    public Optional<Chitty> findById(String chitNumber);
     void deleteChitty(Long id);
 
 

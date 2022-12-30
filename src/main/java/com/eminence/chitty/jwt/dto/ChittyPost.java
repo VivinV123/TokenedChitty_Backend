@@ -8,7 +8,7 @@ import java.util.Date;
 @Data
 public class ChittyPost {
 
-    private Long chitNumber;
+    private String chitNumber;
     private Long installment;
     private Long duration;
     private Long manager;

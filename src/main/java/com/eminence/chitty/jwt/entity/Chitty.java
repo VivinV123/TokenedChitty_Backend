@@ -21,7 +21,7 @@ public class Chitty {
 
     @Id
     @Column(name = "chit_number")
-    private Long chitNumber;
+    private String chitNumber;
 
     @Column(name = "installment")
     private Long installment;
@@ -63,7 +63,7 @@ public class Chitty {
     private Set<ChittalDetails> chittals= new HashSet<>();
 
 
-    public Chitty(Long chitNumber, Long installment, Long duration, ChittyCategory category, int numberOfChittal, int currentNumberOfChittal, Long totalAmount, Manager manager, LocalDate launchDate, LocalDate startDate, String status) {
+    public Chitty(String chitNumber, Long installment, Long duration, ChittyCategory category, int numberOfChittal, int currentNumberOfChittal, Long totalAmount, Manager manager, LocalDate launchDate, LocalDate startDate, String status) {
         this.chitNumber = chitNumber;
         this.installment = installment;
         this.duration = duration;

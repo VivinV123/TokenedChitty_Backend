@@ -5,5 +5,5 @@ import java.util.Set;
 
 public interface ChittalUserIdService {
 
-    Set<Long> getChitties(Long id);
+    Set<String> getChitties(Long id);
 }
