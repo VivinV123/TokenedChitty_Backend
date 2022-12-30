@@ -67,7 +67,7 @@ public class ChittyServiceImpl implements ChittyService{
     }
 
     @Override
-    public Optional<Chitty> findById(Long chitNumber){
+    public Optional<Chitty> findById(String chitNumber){
         Optional<Chitty> chitty = chitRepository.findById(chitNumber);
         return chitty;
     }

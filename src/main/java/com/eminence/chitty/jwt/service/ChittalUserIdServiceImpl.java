@@ -24,8 +24,8 @@ public class ChittalUserIdServiceImpl implements ChittalUserIdService{
 
 
     @Override
-    public Set<Long> getChitties(Long id) {
-        Set<Long> chittyNumbers = new HashSet<>();
+    public Set<String> getChitties(Long id) {
+        Set<String> chittyNumbers = new HashSet<>();
         List<ChittalDetails> chittalList = new ArrayList<ChittalDetails>();
         chittalList = chittalDetailsRepo.findAll();
         for(ChittalDetails chittalDetails : chittalList){

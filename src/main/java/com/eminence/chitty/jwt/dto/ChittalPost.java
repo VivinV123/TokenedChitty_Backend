@@ -8,7 +8,7 @@ import java.util.Date;
 public class ChittalPost {
     private Long chittalId;
     private Long userId;
-    private Long chittyId;
+    private String chittyId;
     private Integer age;
     private String address;
     private Long pinCode;

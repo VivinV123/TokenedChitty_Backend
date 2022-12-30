@@ -27,7 +27,7 @@ public class ChitPostController {
 
 
     @GetMapping("/get/{chitNumber}")
-    Optional<Chitty> getChitty(@PathVariable Long chitNumber){
+    Optional<Chitty> getChitty(@PathVariable String chitNumber){
         return chittyService.findById(chitNumber);
     }
 

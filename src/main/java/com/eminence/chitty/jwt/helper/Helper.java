@@ -83,7 +83,7 @@ public class Helper {
                             p.setPassWord(defaultPassword);
                             break;
                         case 6:
-                            p.setRoleId((int)cell.getNumericCellValue());
+                            p.setRoleId((long)cell.getNumericCellValue());
                         default:
                     }
                     cid++;
