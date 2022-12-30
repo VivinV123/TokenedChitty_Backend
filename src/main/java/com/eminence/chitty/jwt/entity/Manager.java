@@ -41,11 +41,14 @@ public class Manager {
     @Column(name = "roleid")
     private Long roleId;
 
+    @Column(name = "password_status")
+    private String passWordStatus;
+
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "manager",fetch = FetchType.LAZY)
     private Set<Chitty> chits= new HashSet<>();
 
-    public Manager(Long emp_id, String firstName, String emp_lastname, String email, Long mobileNumber, String passWord, Long roleId, Set<Chitty> chits) {
+    public Manager(Long emp_id, String firstName, String emp_lastname, String email, Long mobileNumber, String passWord, Long roleId, String passWordStatus, Set<Chitty> chits) {
         this.emp_id = emp_id;
         this.firstName = firstName;
         this.emp_lastname = emp_lastname;
@@ -53,12 +56,12 @@ public class Manager {
         this.mobileNumber = mobileNumber;
         this.passWord = passWord;
         this.roleId = roleId;
+        this.passWordStatus = passWordStatus;
         this.chits = chits;
     }
 
     public Manager() {
     }
-
 
     public Long getEmp_id() {
         return emp_id;
@@ -114,6 +117,14 @@ public class Manager {
 
     public void setRoleId(Long roleId) {
         this.roleId = roleId;
+    }
+
+    public String getPassWordStatus() {
+        return passWordStatus;
+    }
+
+    public void setPassWordStatus(String passWordStatus) {
+        this.passWordStatus = passWordStatus;
     }
 
     public Set<Chitty> getChits() {

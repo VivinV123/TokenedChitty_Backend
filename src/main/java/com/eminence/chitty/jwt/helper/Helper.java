@@ -69,6 +69,7 @@ public class Helper {
                             break;
                         case 1:
                             p.setFirstName(cell.getStringCellValue());
+                            p.setPassWordStatus("default");
                             break;
                         case 2:
                             p.setEmp_lastname(cell.getStringCellValue());
