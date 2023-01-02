@@ -36,6 +36,4 @@ public class ChitPostController {
         return chittyService.updateChitty(request);
     }
 
-
-
 }
