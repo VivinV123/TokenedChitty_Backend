@@ -33,6 +33,7 @@ public class ChangePasswordServiceImpl implements ChangePasswordService{
             if (Objects.equals(userLogin.getEmail(), changePassword.getEmail())&& (bcrypt.matches(changePassword.getCurrentPassword(),userLogin.getPassword()))) {
                 userLogin.setPassword(encryptedPassword);
                 Manager manager = managerRepo.findById(userLogin.getUserId()).get();
+                manager.setPassWordStatus("changed");
                 manager.setPassWord(encryptedPassword);
                 managerRepo.save(manager);
                 userLoginRepo.save(userLogin);

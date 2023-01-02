@@ -46,4 +46,10 @@ public class ManagerController {
         managerService.add(manager);
         return new ResponseEntity<>("Manager added succesfully",HttpStatus.CREATED);
     }
+
+//    @PutMapping(value = "/changepasswordstatus",produces = "Application/JSON")
+//    public ResponseEntity<Object> change(@RequestBody Manager manager){
+//        managerService.change(manager);
+//        return new ResponseEntity<>("Password status changed successfully",HttpStatus.CREATED);
+//    }
 }
